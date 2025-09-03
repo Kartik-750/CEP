@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FreshLink Pune - Direct Vendor to Customer</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0; padding: 0;
+        background: url('mordo-bilman-k7EjzzK1uhk-unsplash.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+    }
+    header {
+        background: rgba(0,128,0,0.85);
+        color: white; 
+        padding: 25px 15px; 
+        text-align: center;
+        font-size: 1.2rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    nav {
+        background: rgba(0,0,0,0.8);
+        text-align: center; 
+        padding: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+    nav a {
+        color: white; 
+        margin: 0 20px;
+        text-decoration: none; 
+        font-weight: bold;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+    }
+    nav a:hover {
+        color: #4CAF50;
+    }
+    section {
+        background: rgba(255,255,255,0.95);
+        margin: 30px auto; 
+        padding: 20px;
+        max-width: 1000px; 
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    h2 { 
+        text-align: center; 
+        color: #4CAF50; 
+        margin-bottom: 15px; 
+    }
+    .product {
+        display: inline-block;
+        border: 1px solid #ddd;
+        margin: 15px; 
+        padding: 15px;
+        text-align: center; 
+        width: 200px;
+        background: white; 
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+    .product img {
+        width: 160px; height: 130px; 
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .cart, .order-confirmation {
+        border: 1px solid #ccc; 
+        padding: 20px;
+        margin-top: 20px; 
+        background: white; 
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    }
+    button {
+        background-color: #4CAF50; 
+        color: white;
+        padding: 10px 16px; 
+        border: none;
+        cursor: pointer; 
+        margin-top: 12px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        transition: background 0.3s ease;
+    }
+    button:hover { 
+        background-color: #45a049; 
+    }
+    footer {
+        background: rgba(0,0,0,0.9);
+        color: white; 
+        text-align: center;
+        padding: 12px; 
+        margin-top: 30px;
+        font-size: 0.9rem;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>FreshLink Pune</h1>
+    <p>Connecting Pune Vendors Directly to You</p>
+</header>
+
+<nav>
+    <a href="#products">Products</a>
+    <a href="#cart">Cart</a>
+</nav>
+
+<section id="products">
+    <h2>Fresh Vegetables</h2>
+    <div class="product">
+        <img src="c:\Users\eknat\Downloads\download (2).jpg" alt="Tomatoes">
+        <p><strong>Tomatoes</strong> - ₹40/kg</p>
+        <button onclick="addToCart('Tomatoes', 40, 'Ramesh Kumar, Pune', '9876543210')">Add</button>
+    </div>
+    <div class="product">
+        <img src="c:\Users\eknat\Downloads\download (3).jpg" alt="Potatoes">
+        <p><strong>Potatoes</strong> - ₹30/kg</p>
+        <button onclick="addToCart('Potatoes', 30, 'Sunita Devi, Pune', '9123456780')">Add</button>
+    </div>
+
+    <div class="product">
+        <img src="c:\Users\eknat\Downloads\download.jpg" alt="Carrot">
+        <p><strong>Carrot</strong> - ₹20/kg</p>
+        <button onclick="addToCart('Carrot', 20, 'Ramesh Kumar, Pune', '9876543210')">Add</button>
+    </div>
+
+    <div class="product">
+        <img src="c:\Users\eknat\Downloads\download (5).jpg" alt="Cabbage">
+        <p><strong>Cabbage</strong> - ₹30/kg</p>
+        <button onclick="addToCart('Cabbage', 30, 'Ramesh Kumar, Pune', '9876543210')">Add</button>
+    </div>
+
+    <h2>Fresh Fruits</h2>
+    <div class="product">
+        <img src="c:\Users\eknat\Downloads\download (4).jpg" alt="Mangoes">
+        <p><strong>Mangoes</strong> - ₹100/kg</p>
+        <button onclick="addToCart('Mangoes', 100, 'Amit Verma, Pune', '9988776655')">Add</button>
+    </div>
+    <div class="product">
+        <img src="c:\Users\eknat\Downloads\images.jpg" alt="Bananas">
+        <p><strong>Bananas</strong> - ₹50/dozen</p>
+        <button onclick="addToCart('Bananas', 50, 'Shivani Rao, Pune', '9090909090')">Add</button>
+    </div>
+
+    <div class="product">
+        <img src="c:\Users\eknat\Downloads\download (6).jpg" alt="Orange">
+        <p><strong>Orange</strong> - ₹50/dozen</p>
+        <button onclick="addToCart('Orange', 50, 'Shivani Rao, Pune', '9090909090')">Add</button>
+    </div>
+
+     <div class="product">
+        <img src="c:\Users\eknat\Downloads\download (7).jpg" alt="Grapes">
+        <p><strong>Grapes</strong> - ₹50/dozen</p>
+        <button onclick="addToCart('Grapes', 50, 'Shivani Rao, Pune', '9090909090')">Add</button>
+    </div>
+</section>
+
+<section id="cart">
+    <h2>Your Cart</h2>
+    <div class="cart" id="cart-items">
+        Cart is empty.
+    </div>
+    <button onclick="placeOrder()">Place Order</button>
+</section>
+
+<section id="order" style="display:none;">
+    <h2>Order Confirmation</h2>
+    <div class="order-confirmation" id="order-details"></div>
+</section>
+
+<footer>
+    <p>© 2025 FreshLink Pune - Direct Vendor to Customer</p>
+</footer>
+
+<script>
+    let cart = [];
+
+    function addToCart(item, price, vendor, phone) {
+        cart.push({item, price, vendor, phone});
+        displayCart();
+    }
+
+    function displayCart() {
+        const cartDiv = document.getElementById('cart-items');
+        if (cart.length === 0) {
+            cartDiv.innerHTML = 'Cart is empty.';
+            return;
+        }
+        // Group items by vendor
+        const vendors = {};
+        cart.forEach(c => {
+            if (!vendors[c.vendor]) {
+                vendors[c.vendor] = { phone: c.phone, items: [] };
+            }
+            vendors[c.vendor].items.push({ item: c.item, price: c.price });
+        });
+
+        let html = '';
+        for (let vendor in vendors) {
+            html += `<p><strong>Vendor: ${vendor}</strong></p><ul>`;
+            vendors[vendor].items.forEach(i => {
+                html += `<li>${i.item} - ₹${i.price}</li>`;
+            });
+            html += '</ul><hr>';
+        }
+        cartDiv.innerHTML = html;
+    }
+
+    function placeOrder() {
+        if (cart.length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+
+        document.getElementById('order').style.display = 'block';
+        let orderHTML = '<h3>Thank you for your order!</h3>';
+        orderHTML += '<p>Contact your vendor(s) directly to arrange delivery or pickup:</p>';
+
+        // Group items by vendor
+        const vendors = {};
+        cart.forEach(c => {
+            if (!vendors[c.vendor]) {
+                vendors[c.vendor] = { phone: c.phone, items: [] };
+            }
+            vendors[c.vendor].items.push({ item: c.item, price: c.price });
+        });
+
+        for (let vendor in vendors) {
+            orderHTML += `<p><strong>Vendor: ${vendor}</strong><br>
+                          Phone: <a href="tel:${vendors[vendor].phone}">${vendors[vendor].phone}</a></p><ul>`;
+            vendors[vendor].items.forEach(i => {
+                orderHTML += `<li>${i.item} - ₹${i.price}</li>`;
+            });
+            orderHTML += '</ul><hr>';
+        }
+
+        document.getElementById('order-details').innerHTML = orderHTML;
+        cart = []; 
+        displayCart();
+        window.location.hash = "#order";
+    }
+</script>
+
+</body>
+</html>
